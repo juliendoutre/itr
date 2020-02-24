@@ -2,7 +2,7 @@
 
 double timespec_to_ms(const timespec &time_ts)
 {
-    return time_ts.tv_sec * 1'000 + time_ts.tv_nsec / 1'000'000;
+    return time_ts.tv_sec * 1'000 + time_ts.tv_nsec / double(1'000'000);
 }
 
 timespec timespec_from_ms(double time_ms)
@@ -17,7 +17,7 @@ timespec timespec_from_ms(double time_ms)
     if (time_ts.tv_sec < 0 && remains != 0)
     {
         time_ts.tv_sec -= 1;
-        time_ts.tv_nsec = 1'000'000'000 - remains;
+        time_ts.tv_nsec = remains + 1'000'000'000;
     }
 
     return time_ts;
@@ -34,6 +34,7 @@ timespec timespec_negate(const timespec &time_ts)
 {
     struct timespec neg_time_ts;
     neg_time_ts.tv_sec = -time_ts.tv_sec;
+    neg_time_ts.tv_nsec = 0;
 
     if (time_ts.tv_nsec != 0)
     {
@@ -48,6 +49,7 @@ timespec timespec_add(const timespec &time1_ts, const timespec &time2_ts)
 {
     struct timespec res_time_ts;
     res_time_ts.tv_sec = time1_ts.tv_sec + time2_ts.tv_sec;
+    res_time_ts.tv_nsec = time1_ts.tv_nsec + time2_ts.tv_nsec;
 
     if (time1_ts.tv_nsec + time2_ts.tv_nsec > 1'000'000'000)
     {
