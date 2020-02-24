@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 // Example of communication on a bus with a hardware peripheral storing numbers in a fifo data structure.
 // 0xfc000000 is the address of the writing port of the device.
@@ -8,7 +9,10 @@
 int main()
 {
     // volatile allows to bypass eventual compiler optimizations.
-    volatile int ports[3] = 0xfc000000;
+    volatile int *ports = (int *)0xfc000000;
+    printf("%x", ports[0]);
+    printf("%x", ports[1]);
+    printf("%x", ports[2]);
 
     for (int i = 1; i < 1000; i += 2)
     {
