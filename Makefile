@@ -1,27 +1,28 @@
-all: clean build
+all: clean build tests
 
 clean:
 	rm -rf build/*
 
-build: fifo timer looper looper2 build_lib
-
-fifo:
-	gcc src/fifo/main.c -o bin/fifo -O3 -Wall
-
-timer:
-	g++ src/timer/main.cpp -o bin/timer -O3 -Wall -lrt
-
-looper:
-	g++ src/looper/main.cpp -o bin/looper -O3 -Wall lib/itr.a -I .
-
-looper2:
-	g++ src/looper2/main.cpp -o bin/looper2 -O3 -Wall lib/itr.a -I . -lrt
+build: build_lib fifo timer looper looper2
 
 build_lib:
-	g++ -c -o build/itr.o src/time.cpp -I .
+	g++ -c src/time.cpp -I . -o build/itr.o -O3 -Wall -Wextra
 	ar rcs lib/itr.a build/itr.o
+
+fifo:
+	gcc src/fifo/main.c -o bin/fifo -O3 -Wall -Wextra
+
+timer:
+	g++ src/timer/main.cpp -o bin/timer -lrt -O3 -Wall -Wextra
+
+looper:
+	g++ src/looper/main.cpp lib/itr.a -I . -o bin/looper -O3 -Wall -Wextra
+
+looper2:
+	g++ src/looper2/main.cpp lib/itr.a -I . -lrt -o bin/looper2 -O3 -Wall -Wextra
 
 tests: test_time
 
 test_time: build_lib
-	g++ -o bin/test_time tests/time.cpp lib/itr.a -I .
+	g++ tests/time.cpp lib/itr.a -I . -o bin/test_time -O3 -Wall -Wextra
+	./bin/test_time
