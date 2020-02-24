@@ -1,5 +1,5 @@
-#include <assert.h>
 #include <iostream>
+#include "include/time.hpp"
 
 void incr(unsigned int nLoops, double *pCounter)
 {
@@ -11,21 +11,21 @@ void incr(unsigned int nLoops, double *pCounter)
 
 int main(int argc, char *argv[])
 {
-    unsigned int nLoops;
+    unsigned int nLoops = 0;
+
     if (argc > 1)
     {
         nLoops = atoi(argv[1]);
     }
-    else
-    {
-        nLoops = 0;
-    }
 
     double counter = 0.0;
 
+    struct timespec start_ts = timespec_now();
     incr(nLoops, &counter);
+    struct timespec end_ts = timespec_now();
 
-    std::cout << counter << std::endl;
+    std::cout << "counter value: " << counter << std::endl;
+    std::cout << "function execution time: " << end_ts - start_ts << std::endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
