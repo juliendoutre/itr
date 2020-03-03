@@ -2,40 +2,25 @@ all: clean build tests
 
 clean:
 	rm -rf build/*
+	rm -rf bin/*
 
-build: build_lib fifo build_td_1 build_td_2
+build: build_td_0 build_td_1 build_td_2
 
-build_lib:
-	g++ -c src/time.cpp -I . -o build/itr.o -O3 -Wall -Wextra
-	ar rcs lib/itr.a build/itr.o
+build_td_0:
+	gcc src/td0/a/main.c -o bin/td0_a -O3 -Wall -Wextra
 
-build_td_1: timer looper looper2
+build_td_1:
+	g++ -c src/td1/a/time.cpp -I . -o build/time.o -O3 -Wall -Wextra
+	ar rcs lib/time.a build/time.o
+	g++ src/td1/b/main.cpp -o bin/td1_b -lrt -O3 -Wall -Wextra
+	g++ src/td1/c/main.cpp lib/time.a -I . -o bin/td1_c -O3 -Wall -Wextra
+	g++ src/td1/d/main.cpp lib/time.a -I . -lrt -o bin/td1_d -O3 -Wall -Wextra
 
-build_td_2: t_looper t_looper2 t_looper3
+build_td_2:
+	g++ src/td2/a/main.cpp lib/time.a -I . -lrt -pthread -o bin/td2_a -O3 -Wall -Wextra
+	g++ src/td2/b/main.cpp lib/time.a -I . -lrt -pthread -o bin/td2_b -O3 -Wall -Wextra
+	g++ src/td2/c/main.cpp lib/time.a -I . -lrt -pthread -o bin/td2_c -O3 -Wall -Wextra
 
-fifo:
-	gcc src/fifo/main.c -o bin/fifo -O3 -Wall -Wextra
-
-timer:
-	g++ src/timer/main.cpp -o bin/timer -lrt -O3 -Wall -Wextra
-
-looper:
-	g++ src/looper/main.cpp lib/itr.a -I . -o bin/looper -O3 -Wall -Wextra
-
-looper2:
-	g++ src/looper2/main.cpp lib/itr.a -I . -lrt -o bin/looper2 -O3 -Wall -Wextra
-
-t_looper:
-	g++ src/t_looper/main.cpp lib/itr.a -I . -lrt -pthread -o bin/t_looper -O3 -Wall -Wextra
-
-t_looper2:
-	g++ src/t_looper2/main.cpp lib/itr.a -I . -lrt -pthread -o bin/t_looper2 -O3 -Wall -Wextra
-
-t_looper3:
-	g++ src/t_looper3/main.cpp lib/itr.a -I . -lrt -pthread -o bin/t_looper3 -O3 -Wall -Wextra
-
-tests: test_time
-
-test_time: build_lib
+tests: build_td_1
 	g++ tests/time.cpp lib/itr.a -I . -o bin/test_time -O3 -Wall -Wextra
 	./bin/test_time
