@@ -15,6 +15,7 @@ struct Data
 {
     volatile unsigned int nLoops;
     volatile double *pCounter;
+    pthread_mutex_t mutex;
 };
 
 void *call_incr(void *v_data)
@@ -22,7 +23,7 @@ void *call_incr(void *v_data)
     Data *p_data = (Data *)v_data;
     incr(p_data->nLoops, p_data->pCounter);
 
-    return NULL;
+    return nullptr;
 }
 
 int main(int argc, char *argv[])
@@ -54,6 +55,11 @@ int main(int argc, char *argv[])
 
     volatile double counter = 0.0;
     Data data = Data{nLoops, &counter};
+    if (protec)
+    {
+        pthread_mutex_init(&data.mutex, nullptr);
+    }
+
     pthread_t threads[nTasks];
 
     sched_param mainSchedParams;
@@ -84,13 +90,19 @@ int main(int argc, char *argv[])
 
     for (unsigned int i = 0; i < nTasks; i++)
     {
-        pthread_join(threads[i], NULL);
+        pthread_join(threads[i], nullptr);
     }
 
     pthread_attr_destroy(&attr);
+    if (protec)
+    {
+        pthread_mutex_destroy(&data.mutex);
+    }
 
     struct timespec end_ts = timespec_now();
-    std::cout << nLoops << "," << nTasks << "," << (end_ts - start_ts).tv_nsec << std::endl;
+
+    std::cout << "counter value: " << counter << std::endl;
+    std::cout << "function execution time: " << end_ts - start_ts << std::endl;
 
     return EXIT_SUCCESS;
 }

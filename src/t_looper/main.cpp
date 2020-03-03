@@ -21,7 +21,7 @@ void *call_incr(void *v_data)
     Data *p_data = (Data *)v_data;
     incr(p_data->nLoops, p_data->pCounter);
 
-    return NULL;
+    return nullptr;
 }
 
 int main(int argc, char *argv[])
@@ -47,12 +47,12 @@ int main(int argc, char *argv[])
 
     for (unsigned int i = 0; i < nTasks; i++)
     {
-        pthread_create(&threads[i], NULL, call_incr, &data);
+        pthread_create(&threads[i], nullptr, call_incr, &data);
     }
 
     for (unsigned int i = 0; i < nTasks; i++)
     {
-        pthread_join(threads[i], NULL);
+        pthread_join(threads[i], nullptr);
     }
 
     struct timespec end_ts = timespec_now();

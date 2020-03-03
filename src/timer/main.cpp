@@ -17,7 +17,7 @@ int main()
     sa.sa_flags = SA_SIGINFO;
     sa.sa_sigaction = handler;
     sigemptyset(&sa.sa_mask);
-    sigaction(SIGRTMIN, &sa, NULL);
+    sigaction(SIGRTMIN, &sa, nullptr);
 
     struct sigevent sev;
     sev.sigev_notify = SIGEV_SIGNAL;
@@ -33,7 +33,7 @@ int main()
     its.it_interval.tv_sec = 0;
     its.it_interval.tv_nsec = 500'000'000;
 
-    timer_settime(tid, 0, &its, NULL);
+    timer_settime(tid, 0, &its, nullptr);
 
     while (counter < 15)
     {

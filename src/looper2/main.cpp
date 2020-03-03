@@ -39,7 +39,7 @@ Metric run(int seconds)
     sa.sa_flags = SA_SIGINFO;
     sa.sa_sigaction = handler;
     sigemptyset(&sa.sa_mask);
-    sigaction(SIGRTMIN, &sa, NULL);
+    sigaction(SIGRTMIN, &sa, nullptr);
 
     struct sigevent sev;
     sev.sigev_notify = SIGEV_SIGNAL;
@@ -55,7 +55,7 @@ Metric run(int seconds)
     its.it_interval.tv_sec = 0;
     its.it_interval.tv_nsec = 0;
 
-    timer_settime(tid, 0, &its, NULL);
+    timer_settime(tid, 0, &its, nullptr);
 
     struct timespec start_ts = timespec_now();
     m.loopsNumber = incr(UINT_MAX, &counter, &pStop);
