@@ -1,5 +1,6 @@
 #include <iostream>
 #include <pthread.h>
+#include <string.h>
 #include "include/time.hpp"
 
 void incr(unsigned int nLoops, volatile double *pCounter)
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
     volatile unsigned int nLoops = 0;
     unsigned int nTasks = 0;
     int schedPolicy = 0;
+    bool protec = false;
 
     if (argc > 1)
     {
@@ -41,6 +43,11 @@ int main(int argc, char *argv[])
             if (argc > 3)
             {
                 schedPolicy = atoi(argv[3]);
+
+                if (argc > 4 && strcmp(argv[4], "protected"))
+                {
+                    protec = true;
+                }
             }
         }
     }

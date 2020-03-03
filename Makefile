@@ -11,7 +11,7 @@ build_lib:
 
 build_td_1: timer looper looper2
 
-build_td_2: t_looper t_looper2
+build_td_2: t_looper t_looper2 t_looper3
 
 fifo:
 	gcc src/fifo/main.c -o bin/fifo -O3 -Wall -Wextra
@@ -30,6 +30,9 @@ t_looper:
 
 t_looper2:
 	g++ src/t_looper2/main.cpp lib/itr.a -I . -lrt -pthread -o bin/t_looper2 -O3 -Wall -Wextra
+
+t_looper3:
+	g++ src/t_looper3/main.cpp lib/itr.a -I . -lrt -pthread -o bin/t_looper3 -O3 -Wall -Wextra
 
 tests: test_time
 
