@@ -2,7 +2,7 @@
 #include <time.h>
 #include <iostream>
 
-void handler(int sig, siginfo_t *si, void *)
+void handler(int, siginfo_t *si, void *)
 {
     std::cout << *(volatile int *)(si->si_value.sival_ptr) << std::endl;
     *(volatile int *)(si->si_value.sival_ptr) += 1;

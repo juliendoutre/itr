@@ -3,7 +3,7 @@
 #include <signal.h>
 #include "include/time.hpp"
 
-void handler(int sig, siginfo_t *si, void *)
+void handler(int, siginfo_t *si, void *)
 {
     *(volatile bool *)(si->si_value.sival_ptr) = true;
 }
