@@ -3,7 +3,7 @@ all: clean build tests
 clean:
 	rm -rf build/*
 
-build: build_lib fifo timer looper looper2 looper3
+build: build_lib fifo timer looper looper2 t_looper
 
 build_lib:
 	g++ -c src/time.cpp -I . -o build/itr.o -O3 -Wall -Wextra
@@ -21,8 +21,8 @@ looper:
 looper2:
 	g++ src/looper2/main.cpp lib/itr.a -I . -lrt -o bin/looper2 -O3 -Wall -Wextra
 
-looper3:
-	g++ src/looper3/main.cpp lib/itr.a -I . -lrt -pthread -o bin/looper3 -O3 -Wall -Wextra
+t_looper:
+	g++ src/t_looper/main.cpp lib/itr.a -I . -lrt -pthread -o bin/t_looper -O3 -Wall -Wextra
 
 tests: test_time
 
