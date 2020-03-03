@@ -30,11 +30,19 @@ int main(int argc, char *argv[])
     unsigned int nTasks = 0;
     int schedPolicy = 0;
 
-    if (argc > 3)
+    if (argc > 1)
     {
         nLoops = atoi(argv[1]);
-        nTasks = atoi(argv[2]);
-        schedPolicy = atoi(argv[3]);
+
+        if (argc > 2)
+        {
+            nTasks = atoi(argv[2]);
+
+            if (args > 3)
+            {
+                schedPolicy = atoi(argv[3]);
+            }
+        }
     }
 
     volatile double counter = 0.0;

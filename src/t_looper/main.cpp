@@ -29,10 +29,14 @@ int main(int argc, char *argv[])
     volatile unsigned int nLoops = 0;
     unsigned int nTasks = 0;
 
-    if (argc > 2)
+    if (argc > 1)
     {
         nLoops = atoi(argv[1]);
-        nTasks = atoi(argv[2]);
+
+        if (argc > 2)
+        {
+            nTasks = atoi(argv[2]);
+        }
     }
 
     volatile double counter = 0.0;
