@@ -15,13 +15,24 @@ struct Data
 {
     volatile unsigned int nLoops;
     volatile double *pCounter;
+    int protec;
     pthread_mutex_t mutex;
 };
 
 void *call_incr(void *v_data)
 {
     Data *p_data = (Data *)v_data;
+
+    if (p_data->protec)
+    {
+        pthread_mutex_lock(&p_data->mutex);
+    }
     incr(p_data->nLoops, p_data->pCounter);
+
+    if (p_data->protec)
+    {
+        pthread_mutex_lock(&p_data->mutex);
+    }
 
     return nullptr;
 }
@@ -45,7 +56,7 @@ int main(int argc, char *argv[])
             {
                 schedPolicy = atoi(argv[3]);
 
-                if (argc > 4 && strcmp(argv[4], "protected"))
+                if (argc > 4 && *argv[4] == 'p')
                 {
                     protec = true;
                 }
@@ -54,7 +65,7 @@ int main(int argc, char *argv[])
     }
 
     volatile double counter = 0.0;
-    Data data = Data{nLoops, &counter};
+    Data data = Data{nLoops, &counter, protec};
     if (protec)
     {
         pthread_mutex_init(&data.mutex, nullptr);
