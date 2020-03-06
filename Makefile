@@ -26,6 +26,8 @@ build_td_3:
 	ar rcs lib/chrono.a build/chrono.o
 
 
-tests: build_td_1
-	g++ tests/time.cpp lib/itr.a -I . -o bin/test_time -O3 -Wall -Wextra
+tests: build_td_1 build_td_3
+	g++ tests/time.cpp lib/time.a -I . -o bin/test_time -O3 -Wall -Wextra
 	./bin/test_time
+	g++ tests/chrono.cpp lib/chrono.a lib/time.a -I . -o bin/test_chrono -O3 -Wall -Wextra
+	./bin/test_chrono
