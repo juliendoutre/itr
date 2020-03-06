@@ -24,6 +24,8 @@ build_td_2:
 build_td_3:
 	g++ -c src/td3/a/chrono.cpp -I . -o build/chrono.o -O3 -Wall -Wextra
 	ar rcs lib/chrono.a build/chrono.o
+	g++ -c src/td3/a/timer.cpp -I . -o build/timer.o -O3 -Wall -Wextra
+	ar rcs lib/timer.a build/timer.o
 
 
 tests: build_td_1 build_td_3
