@@ -38,7 +38,7 @@ void Timer::stop()
     timer_settime(this->tid, 0, &its, nullptr);
 }
 
-static void Timer::call_callback(int sig, siginfo_t *si, void *)
+void Timer::call_callback(int, siginfo_t *si, void *)
 {
     Timer *t_class = (Timer *)(si->si_value.sival_ptr);
     t_class->callback();
