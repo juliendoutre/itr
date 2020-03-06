@@ -4,7 +4,7 @@ clean:
 	rm -rf build/*
 	rm -rf bin/*
 
-build: build_td_0 build_td_1 build_td_2
+build: build_td_0 build_td_1 build_td_2 build_td_3
 
 build_td_0:
 	gcc src/td0/a/main.c -o bin/td0_a -O3 -Wall -Wextra
@@ -20,6 +20,11 @@ build_td_2:
 	g++ src/td2/a/main.cpp lib/time.a -I . -lrt -pthread -o bin/td2_a -O3 -Wall -Wextra
 	g++ src/td2/b/main.cpp lib/time.a -I . -lrt -pthread -o bin/td2_b -O3 -Wall -Wextra
 	g++ src/td2/c/main.cpp lib/time.a -I . -lrt -pthread -o bin/td2_c -O3 -Wall -Wextra
+
+build_td_3:
+	g++ -c src/td3/a/chrono.cpp -I . -o build/chrono.o -O3 -Wall -Wextra
+	ar rcs lib/chrono.a build/chrono.o
+
 
 tests: build_td_1
 	g++ tests/time.cpp lib/itr.a -I . -o bin/test_time -O3 -Wall -Wextra
