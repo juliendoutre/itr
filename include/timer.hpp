@@ -5,7 +5,7 @@ class Timer
 {
 protected:
     timer_t tid;
-    virtual void callback();
+    virtual void callback() = 0;
 
 public:
     Timer();
