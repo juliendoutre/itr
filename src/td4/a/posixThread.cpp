@@ -73,14 +73,14 @@ bool PosixThread::getScheduling(int *p_schedPolicy = nullptr, int *p_priority = 
     {
         sched_param schedParams;
         pthread_getschedparam(this->posixId, p_schedPolicy, &schedParams);
-        p_priority = &schedParams.sched_priority;
+        *p_priority = schedParams.sched_priority;
     }
     else
     {
         pthread_attr_getschedpolicy(&this->posixAttr, p_schedPolicy);
         sched_param schedParams;
         pthread_attr_getschedparam(&this->posixAttr, &schedParams);
-        p_priority = &schedParams.sched_priority;
+        *p_priority = schedParams.sched_priority;
     }
 
     return this->isActive;
