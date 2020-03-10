@@ -9,12 +9,17 @@ PosixThread::PosixThread()
 
 PosixThread::PosixThread(pthread_t posixId)
 {
-    int errorCode = pthread_getschedparam(posixId, nullptr, nullptr);
+    sched_param schedParam;
+    int schedPolicy;
+
+    this->isActive = false;
+    int errorCode = pthread_getschedparam(posixId, &schedPolicy, &schedParam);
     if (errorCode != 0)
     {
         throw Exception();
     }
 
+    this->setScheduling(schedPolicy, schedParam.sched_priority);
     this->posixId = posixId;
     this->isActive = true;
 }
