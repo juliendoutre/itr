@@ -27,6 +27,7 @@ build_td_3:
 	g++ -c src/td3/b/timer.cpp -I . -o build/timer.o -O3 -Wall -Wextra
 	ar rcs lib/timer.a build/timer.o
 	g++ src/td3/b/main.cpp src/td3/b/countDown.cpp lib/timer.a lib/time.a -I . -lrt -pthread -o bin/td3_b -O3 -Wall -Wextra
+	g++ src/td3/c/main.cpp lib/timer.a lib/time.a -I . -lrt -pthread -o bin/td3_c -O3 -Wall -Wextra
 
 
 tests: build_td_1 build_td_3
