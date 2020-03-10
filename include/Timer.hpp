@@ -16,9 +16,3 @@ public:
 private:
     static void call_callback(int, siginfo_t *, void *);
 };
-
-class PeriodicTimer : public Timer
-{
-public:
-    void start(double duration_ms);
-};

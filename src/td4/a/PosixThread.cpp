@@ -1,5 +1,5 @@
-#include "include/posixThread.hpp"
 #include "include/time.hpp"
+#include "include/PosixThread.hpp"
 
 PosixThread::PosixThread()
 {

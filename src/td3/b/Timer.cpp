@@ -1,4 +1,4 @@
-#include "include/timer.hpp"
+#include "include/Timer.hpp"
 #include "include/time.hpp"
 
 Timer::Timer()
@@ -42,12 +42,4 @@ void Timer::call_callback(int, siginfo_t *si, void *)
 {
     Timer *t_class = (Timer *)(si->si_value.sival_ptr);
     t_class->callback();
-}
-
-void PeriodicTimer::start(double duration_ms)
-{
-    itimerspec its;
-    its.it_value = timespec_from_ms(duration_ms);
-    its.it_interval = timespec_from_ms(duration_ms);
-    timer_settime(this->tid, 0, &its, nullptr);
 }

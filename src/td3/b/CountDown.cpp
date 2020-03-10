@@ -1,4 +1,4 @@
-#include "countDown.hpp"
+#include "CountDown.hpp"
 #include <iostream>
 
 CountDown::CountDown(int n)

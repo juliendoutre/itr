@@ -1,4 +1,4 @@
-#include "include/chrono.hpp"
+#include "include/Chrono.hpp"
 #include "include/time.hpp"
 
 Chrono::Chrono()
