@@ -3,6 +3,7 @@ all: clean build tests
 clean:
 	rm -rf build/*
 	rm -rf bin/*
+	rm -rf lib/*
 
 build: build_lib build_td_0 build_td_1 build_td_2 build_td_3
 
@@ -30,7 +31,7 @@ build_td_2:
 
 build_td_3:
 	g++ src/td3/b/main.cpp src/td3/b/CountDown.cpp lib/itr.a -I . -lrt -pthread -o bin/td3_b -O3 -Wall -Wextra
-	g++ src/td3/c/main.cpp lib/itr.a -I . -lrt -pthread -o bin/td3_c -O3 -Wall -Wextra
+	g++ src/td3/c/main.cpp src/td3/c/Looper.cpp src/td3/c/Calibrator.cpp src/td3/c/CpuLoop.cpp lib/itr.a -I . -lrt -pthread -o bin/td3_c -O3 -Wall -Wextra
 
 tests: build_lib
 	g++ tests/time.cpp lib/itr.a -I . -o bin/test_time -O3 -Wall -Wextra
