@@ -5,16 +5,16 @@ clean:
 	rm -rf bin/*
 	rm -rf lib/*
 
-build: build_lib build_td_0 build_td_1 build_td_2 build_td_3
+build: build_lib build_td_0 build_td_1 build_td_2 build_td_3 build_td_4
 
 build_lib:
 	g++ -I . -o build/time.o -O3 -Wall -Wextra -c src/td1/a/time.cpp
-	g++ -I . -o build/chrono.o -O3 -Wall -Wextra -c src/td3/a/Chrono.cpp
-	g++ -I . -o build/timer.o -O3 -Wall -Wextra -c src/td3/b/Timer.cpp
-	g++ -I . -o build/periodicTimer.o -O3 -Wall -Wextra -c src/td3/b/PeriodicTimer.cpp
-	g++ -I . -o build/posixThread.o -O3 -Wall -Wextra -c  src/td4/a/PosixThread.cpp
-	g++ -I . -o build/thread.o -O3 -Wall -Wextra -c  src/td4/a/Thread.cpp
-	ar rcs lib/itr.a build/time.o build/chrono.o build/timer.o build/periodicTimer.o build/posixThread.o build/thread.o
+	g++ -I . -o build/Chrono.o -O3 -Wall -Wextra -c src/td3/a/Chrono.cpp
+	g++ -I . -o build/Timer.o -O3 -Wall -Wextra -c src/td3/b/Timer.cpp
+	g++ -I . -o build/PeriodicTimer.o -O3 -Wall -Wextra -c src/td3/b/PeriodicTimer.cpp
+	g++ -I . -o build/PosixThread.o -O3 -Wall -Wextra -c  src/td4/a/PosixThread.cpp
+	g++ -I . -o build/Thread.o -O3 -Wall -Wextra -c  src/td4/a/Thread.cpp
+	ar rcs lib/itr.a build/time.o build/Chrono.o build/Timer.o build/PeriodicTimer.o build/PosixThread.o build/Thread.o
 
 build_td_0:
 	gcc src/td0/a/main.c -o bin/td0_a -O3 -Wall -Wextra
@@ -32,6 +32,9 @@ build_td_2:
 build_td_3:
 	g++ src/td3/b/main.cpp src/td3/b/CountDown.cpp lib/itr.a -I . -lrt -pthread -o bin/td3_b -O3 -Wall -Wextra
 	g++ src/td3/c/main.cpp src/td3/c/Looper.cpp src/td3/c/Calibrator.cpp src/td3/c/CpuLoop.cpp lib/itr.a -I . -lrt -pthread -o bin/td3_c -O3 -Wall -Wextra
+
+build_td_4:
+	g++ src/td4/a/main.cpp src/td4/a/Looper.cpp lib/itr.a -I . -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
 
 tests: build_lib
 	g++ tests/time.cpp lib/itr.a -I . -o bin/test_time -O3 -Wall -Wextra
