@@ -1,3 +1,4 @@
+#pragma once
 #include "Timer.hpp"
 
 class PeriodicTimer : public Timer

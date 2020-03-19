@@ -1,3 +1,4 @@
+#pragma once
 #include "Calibrator.hpp"
 
 class CpuLoop : public Looper

@@ -1,3 +1,4 @@
+#pragma once
 #include "include/PeriodicTimer.hpp"
 
 class CountDown : public PeriodicTimer

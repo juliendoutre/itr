@@ -1,18 +1,20 @@
+#pragma once
 #include "PosixThread.hpp"
 
 class Thread : public PosixThread
 {
-public:
-    Thread();
-    ~Thread();
-    void start();
-    double startTime_ms();
-    double stopTime_ms();
-    double execTime_ms();
+private:
+    static void *call_run(void *v_thread);
 
 protected:
     virtual void run() = 0;
 
-private:
-    static void *call_run(void *v_thread);
+public:
+    Thread();
+    ~Thread();
+    void start();
+    void sleep_ms(double delay_ms);
+    double startTime_ms();
+    double stopTime_ms();
+    double execTime_ms();
 };
