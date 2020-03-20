@@ -31,7 +31,7 @@ void *call_incr(void *v_data)
 
     if (p_data->protec)
     {
-        pthread_mutex_lock(&p_data->mutex);
+        pthread_mutex_unlock(&p_data->mutex);
     }
 
     return nullptr;

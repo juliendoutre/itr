@@ -32,6 +32,6 @@
 *.app
 
 .vscode/
-bin/
-build/
-lib/
+bin/*
+build/*
+lib/*
