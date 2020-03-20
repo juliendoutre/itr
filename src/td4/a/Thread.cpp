@@ -1,6 +1,16 @@
+#include "include/PosixThread.hpp"
 #include "include/Thread.hpp"
 #include "include/time.hpp"
 #include <thread>
+
+Thread::Thread() : PosixThread()
+{
+    this->started = false;
+    this->startTime_ = 0;
+    this->stopTime_ = 0;
+}
+
+Thread::~Thread() {}
 
 void *Thread::call_run(void *v_thread)
 {
@@ -13,9 +23,15 @@ void *Thread::call_run(void *v_thread)
     return nullptr;
 }
 
-void Thread::start()
+bool Thread::start()
 {
-    this->PosixThread::start(Thread::call_run, this);
+    if (!this->started)
+    {
+        this->started = true;
+        this->PosixThread::start(Thread::call_run, this);
+    }
+
+    return this->started;
 }
 
 void Thread::sleep_ms(double delay_ms)
