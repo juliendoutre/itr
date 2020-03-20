@@ -12,10 +12,9 @@ protected:
     bool isActive;
 
 public:
-    class Exception
-    {
-    };
+    class Exception;
 
+public:
     PosixThread();
     PosixThread(pthread_t posixId);
     ~PosixThread();
@@ -24,4 +23,8 @@ public:
     bool join(double timeout_ms);
     bool setScheduling(int schedPolicy, int priority);
     bool getScheduling(int *p_schedPolicy, int *p_priority);
+};
+
+class PosixThread::Exception
+{
 };

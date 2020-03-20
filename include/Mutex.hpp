@@ -12,40 +12,48 @@ private:
     void unlock();
 
 public:
-    Mutex();
-    ~Mutex();
     class Monitor;
     class Lock;
     class TryLock;
+
+public:
+    Mutex();
+    ~Mutex();
 };
 
 class Mutex::Monitor
 {
 protected:
-    Monitor(Mutex &m);
+    Mutex &mutex;
+
+protected:
+    Monitor(Mutex &mutex);
 
 public:
-    class TimeoutException
-    {
-    };
+    class TimeoutException;
 
+public:
     void wait();
     bool wait(double timeout_ms);
     void notify();
     void notifyAll();
 };
 
+class Mutex::Monitor::TimeoutException
+{
+};
+
 class Mutex::Lock : public Mutex::Monitor
 {
 public:
-    Lock(Mutex &m);
-    Lock(Mutex &m, double timeout_ms);
+    Lock(Mutex &mutex);
+    Lock(Mutex &mutex, double timeout_ms);
     ~Lock();
 };
 
 class Mutex::TryLock : public Mutex::Monitor
 {
 public:
-    TryLock(Mutex &m);
+    TryLock(Mutex &mutex);
     ~TryLock();
 };
