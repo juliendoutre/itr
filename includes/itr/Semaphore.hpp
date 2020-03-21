@@ -1,10 +1,13 @@
+#pragma once
 #include <limits.h>
+#include "Mutex.hpp"
 
 class Semaphore
 {
 private:
     unsigned int counter;
     unsigned int maxCount;
+    Mutex mutex;
 
 public:
     Semaphore(unsigned int initCount = 0, unsigned int maxCount = UINT_MAX);
