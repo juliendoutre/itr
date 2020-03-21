@@ -1,6 +1,6 @@
 #include <iostream>
 #include <pthread.h>
-#include "include/time.hpp"
+#include "itr/time.hpp"
 
 void incr(unsigned int nLoops, volatile double *pCounter)
 {

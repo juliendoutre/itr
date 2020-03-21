@@ -1,6 +1,6 @@
-#include "include/PosixThread.hpp"
-#include "include/Thread.hpp"
-#include "include/time.hpp"
+#include "itr/PosixThread.hpp"
+#include "itr/Thread.hpp"
+#include "itr/time.hpp"
 #include <thread>
 
 Thread::Thread() : PosixThread()

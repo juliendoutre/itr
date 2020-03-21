@@ -1,5 +1,5 @@
 #pragma once
-#include "include/Thread.hpp"
+#include "itr/Thread.hpp"
 
 class Looper : public Thread
 {

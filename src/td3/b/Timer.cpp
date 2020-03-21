@@ -1,5 +1,5 @@
-#include "include/Timer.hpp"
-#include "include/time.hpp"
+#include "itr/Timer.hpp"
+#include "itr/time.hpp"
 
 Timer::Timer()
 {

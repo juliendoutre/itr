@@ -1,5 +1,5 @@
-#include "include/PeriodicTimer.hpp"
-#include "include/time.hpp"
+#include "itr/PeriodicTimer.hpp"
+#include "itr/time.hpp"
 
 void PeriodicTimer::start(double duration_ms)
 {
