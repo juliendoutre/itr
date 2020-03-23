@@ -1,5 +1,5 @@
-#include <iostream>
 #include "CpuLoop.hpp"
+#include "Calibrator.hpp"
 
 int main()
 {
@@ -8,5 +8,5 @@ int main()
 
     controledLooper.runTime(100);
 
-    return EXIT_SUCCESS;
+    return 0;
 }

@@ -15,7 +15,7 @@ struct Data
 {
     volatile unsigned int nLoops;
     volatile double *pCounter;
-    int protec;
+    bool protec;
     pthread_mutex_t mutex;
 };
 
@@ -66,7 +66,11 @@ int main(int argc, char *argv[])
     }
 
     volatile double counter = 0.0;
-    Data data = Data{nLoops, &counter, protec};
+    Data data;
+    data.nLoops = nLoops;
+    data.pCounter = &counter;
+    data.protec = protec;
+
     if (protec)
     {
         pthread_mutex_init(&data.mutex, nullptr);

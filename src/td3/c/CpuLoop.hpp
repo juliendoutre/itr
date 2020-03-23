@@ -1,5 +1,6 @@
 #pragma once
 #include "Calibrator.hpp"
+#include "Looper.hpp"
 
 class CpuLoop : public Looper
 {

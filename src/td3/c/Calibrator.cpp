@@ -1,6 +1,5 @@
 #include "Calibrator.hpp"
 #include "Looper.hpp"
-#include <iostream>
 
 Calibrator::Calibrator(double samplingPeriod, unsigned int nSamples)
 {
