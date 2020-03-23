@@ -21,16 +21,16 @@ unsigned int incr(unsigned int nLoops, double *pCounter, volatile bool *pStop)
     return doneLoops;
 }
 
-struct Metric
+struct Sample
 {
     int seconds;
     unsigned int loopsNumber;
 };
 
-Metric run(int seconds)
+Sample run(int seconds)
 {
-    struct Metric m;
-    m.seconds = seconds;
+    struct Sample sample;
+    sample.seconds = seconds;
 
     double counter = 0.0;
     volatile bool pStop = false;
@@ -58,16 +58,16 @@ Metric run(int seconds)
     timer_settime(tid, 0, &its, nullptr);
 
     struct timespec start_ts = timespec_now();
-    m.loopsNumber = incr(UINT_MAX, &counter, &pStop);
+    sample.loopsNumber = incr(UINT_MAX, &counter, &pStop);
     struct timespec end_ts = timespec_now();
 
     timer_delete(tid);
 
     std::cout << "counter value: " << counter << std::endl;
-    std::cout << "loops done: " << m.loopsNumber << std::endl;
+    std::cout << "loops done: " << sample.loopsNumber << std::endl;
     std::cout << "function execution time: " << end_ts - start_ts << std::endl;
 
-    return m;
+    return sample;
 }
 
 struct Parameters
@@ -80,8 +80,8 @@ Parameters calibrate()
 {
     struct Parameters params;
 
-    struct Metric p1 = run(4);
-    struct Metric p2 = run(6);
+    Sample p1 = run(4);
+    Sample p2 = run(6);
 
     params.a = (p2.loopsNumber - p1.loopsNumber) / (p2.seconds - p1.seconds);
     params.b = p2.loopsNumber - params.a * p2.seconds;
