@@ -1,5 +1,6 @@
 #pragma once
 #include <pthread.h>
+#include <exception>
 
 class Mutex
 {
@@ -39,8 +40,12 @@ public:
     void notifyAll();
 };
 
-class Mutex::Monitor::TimeoutException
+class Mutex::Monitor::TimeoutException : public std::exception
 {
+    const char *what() const throw()
+    {
+        return "Failed to unlock the mutex";
+    }
 };
 
 class Mutex::Lock : public Mutex::Monitor

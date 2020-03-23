@@ -1,6 +1,7 @@
 #pragma once
 #include "Mutex.hpp"
 #include <queue>
+#include <exception>
 
 template <typename T>
 class Fifo
@@ -19,7 +20,13 @@ public:
 };
 
 template <typename T>
-class Fifo<T>::EmptyException;
+class Fifo<T>::EmptyException : public std::exception
+{
+    const char *what() const throw()
+    {
+        return "The fifo is empty";
+    }
+};
 
 template <typename T>
 void Fifo<T>::push() {}

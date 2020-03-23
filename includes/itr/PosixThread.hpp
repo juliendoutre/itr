@@ -25,6 +25,10 @@ public:
     bool getScheduling(int *p_schedPolicy, int *p_priority);
 };
 
-class PosixThread::Exception
+class PosixThread::Exception : public std::exception
 {
+    const char *what() const throw()
+    {
+        return "No existing thread matches this Posix id";
+    }
 };
