@@ -1,4 +1,5 @@
 #include "itr/time.hpp"
+#include <time.h>
 
 double timespec_to_ms(const timespec &time_ts)
 {

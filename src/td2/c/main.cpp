@@ -27,6 +27,7 @@ void *call_incr(void *v_data)
     {
         pthread_mutex_lock(&p_data->mutex);
     }
+
     incr(p_data->nLoops, p_data->pCounter);
 
     if (p_data->protec)
