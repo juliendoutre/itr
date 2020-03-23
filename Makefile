@@ -28,6 +28,7 @@ td1: lib
 	g++ src/td1/b/main.cpp -o bin/td1_b -lrt -O3 -Wall -Wextra
 	g++ src/td1/c/main.cpp lib/itr.a -I ./includes/ -o bin/td1_c -O3 -Wall -Wextra
 	g++ src/td1/d/main.cpp lib/itr.a -I ./includes/ -lrt -o bin/td1_d -O3 -Wall -Wextra
+	g++ src/td1/e/main.cpp lib/itr.a -I ./includes/ -lrt -o bin/td1_e -O3 -Wall -Wextra
 
 td2: lib
 	g++ src/td2/a/main.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td2_a -O3 -Wall -Wextra
