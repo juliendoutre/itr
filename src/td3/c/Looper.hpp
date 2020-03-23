@@ -5,7 +5,7 @@ class Looper
 {
 private:
     volatile bool doStop;
-    double iLoop;
+    volatile double iLoop;
 
 public:
     double runLoop(double nLoops = DBL_MAX);
