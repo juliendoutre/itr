@@ -42,3 +42,4 @@ td3: lib
 
 td4: lib
 	g++ src/td4/a/main.cpp src/td4/a/Looper.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
+	g++ src/td4/b/main.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_b -O3 -Wall -Wextra
