@@ -1,25 +1,27 @@
 #include "itr/Fifo.hpp"
+#include "itr/Mutex.hpp"
 #include "Producer.hpp"
 #include "Consumer.hpp"
 #include <vector>
 
 int main()
 {
-    unsigned int consumersPoolSize = 10;
-    unsigned int producersPoolSize = 10;
+    unsigned int consumersPoolSize = 5;
+    unsigned int producersPoolSize = 5;
 
     Fifo<int> fifo = Fifo<int>();
+    Mutex printMutex = Mutex();
 
     // Initialize the workers pool
     std::vector<Producer> producers;
     for (unsigned int i = 0; i < producersPoolSize; i++)
     {
-        producers.push_back(Producer(i, 100, fifo));
+        producers.push_back(Producer(i, 100, fifo, printMutex));
     }
     std::vector<Consumer> consumers;
     for (unsigned int i = 0; i < consumersPoolSize; i++)
     {
-        consumers.push_back(Consumer(i, 100, fifo));
+        consumers.push_back(Consumer(i, 100, fifo, printMutex));
     }
 
     // Start the workers

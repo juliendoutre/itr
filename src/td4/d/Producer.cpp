@@ -1,9 +1,9 @@
-#include "itr/Thread.hpp"
 #include "itr/Fifo.hpp"
+#include "itr/Mutex.hpp"
 #include "Producer.hpp"
 #include <iostream>
 
-Producer::Producer(unsigned int id, int upperBound, Fifo<int> &fifo) : id(id), upperBound(upperBound), fifo(fifo) {}
+Producer::Producer(unsigned int id, int upperBound, Fifo<int> &fifo, Mutex &printMutex) : id(id), upperBound(upperBound), fifo(fifo), printMutex(printMutex) {}
 
 void Producer::run()
 {
@@ -12,5 +12,6 @@ void Producer::run()
         this->fifo.push(i);
     }
 
+    Mutex::Lock(this->printMutex);
     std::cout << "Producer " << this->id << " finished to load " << this->upperBound << " elements" << std::endl;
 }
