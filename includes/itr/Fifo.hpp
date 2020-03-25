@@ -29,18 +29,33 @@ class Fifo<T>::EmptyException : public std::exception
 };
 
 template <typename T>
-void Fifo<T>::push()
+void Fifo<T>::push(T element)
 {
+    Mutex::Lock lock = Mutex::Lock(this->mutex);
+    this->elements.push_back(element);
+    lock.notify();
 }
 
 template <typename T>
 T Fifo<T>::pop()
 {
-    return nullptr;
+    Mutex::Lock lock = Mutex::Lock(this->mutex);
+    while (this->elements.size() == 0)
+    {
+        lock.wait();
+    }
+
+    return this->elements.pop_front();
 }
 
 template <typename T>
 T Fifo<T>::pop(double timeout_ms)
 {
-    return nullptr;
+    Mutex::Lock lock = Mutex::Lock(this->mutex, timeout_ms);
+    if (!lock.wait(timeout_ms) || this->elements.size() == 0)
+    {
+        throw Fifo<T>::EmptyException()
+    }
+
+    return this->elements.pop_front();
 }
