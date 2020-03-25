@@ -1,10 +1,36 @@
 #include "itr/Mutex.hpp"
-#include "Looper.hpp"
+#include "Worker.hpp"
+#include <iostream>
+#include <vector>
 
 int main()
 {
-    Mutex mutex;
-    Mutex::Lock lock = Mutex::Lock(mutex);
+    volatile int counter = 0;
+    Mutex mutex = Mutex();
 
-    return 0;
+    unsigned int poolSize = 10;
+
+    // Initialize the workers pool
+    std::vector<Worker> workers;
+    for (unsigned int i = 0; i < poolSize; i++)
+    {
+        workers.push_back(Worker(1000, &counter, mutex));
+    }
+
+    // Start the workers
+    for (unsigned int i = 0; i < poolSize; i++)
+    {
+        workers[i].start();
+    }
+
+    // Wait for all workers to finish their job
+    for (unsigned int i = 0; i < poolSize; i++)
+    {
+        workers[i].join();
+        std::cout << "Task " << i << " took " << workers[i].execTime_ms() << " ms" << std::endl;
+    }
+
+    std::cout << "Counter value: " << counter << std::endl;
+
+    return EXIT_SUCCESS;
 }
