@@ -6,7 +6,7 @@
 class ActiveObject : public Thread
 {
 protected:
-    Fifo<*Request> reqFifo;
+    Fifo<Request *> reqFifo;
 
 protected:
     void run();

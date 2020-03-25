@@ -7,6 +7,6 @@ protected:
     Semaphore returnSema;
 
 public:
-    void execute() = 0;
+    virtual void execute() = 0;
     void waitReturn();
 };

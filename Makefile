@@ -7,7 +7,7 @@ clean:
 	rm -rf bin/*
 	rm -rf lib/*
 
-build: lib td0 td1 td2 td3 td4
+build: lib td0 td1 td2 td3 td4 td6
 
 lib:
 	g++ -I ./includes/ -o build/time.o -O3 -Wall -Wextra -c src/td1/a/time.cpp
@@ -18,7 +18,9 @@ lib:
 	g++ -I ./includes/ -o build/Thread.o -O3 -Wall -Wextra -c  src/td4/a/Thread.cpp
 	g++ -I ./includes/ -o build/Mutex.o -O3 -Wall -Wextra -c src/td4/b/Mutex.cpp
 	g++ -I ./includes/ -o build/Semaphore.o -O3 -Wall -Wextra -c src/td4/c/Semaphore.cpp
-	ar rcs lib/itr.a build/time.o build/Chrono.o build/Timer.o build/PeriodicTimer.o build/PosixThread.o build/Thread.o build/Mutex.o build/Semaphore.o
+	g++ -I ./includes/ -o build/ActiveObject.o -O3 -Wall -Wextra -c src/td6/ActiveObject.cpp
+	g++ -I ./includes/ -o build/Request.o -O3 -Wall -Wextra -c src/td6/Request.cpp
+	ar rcs lib/itr.a build/time.o build/Chrono.o build/Timer.o build/PeriodicTimer.o build/PosixThread.o build/Thread.o build/Mutex.o build/Semaphore.o build/ActiveObject.o build/Request.o
 
 td0:
 	gcc src/td0/a/main.c -o bin/td0_a -O3 -Wall -Wextra
@@ -45,3 +47,6 @@ td4: lib
 	g++ src/td4/b/main.cpp src/td4/b/Worker.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_b -O3 -Wall -Wextra
 	g++ src/td4/c/main.cpp src/td4/c/Producer.cpp src/td4/c/Consumer.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_c -O3 -Wall -Wextra
 	g++ src/td4/d/main.cpp src/td4/d/Producer.cpp src/td4/d/Consumer.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_d -O3 -Wall -Wextra
+
+td6: lib
+	g++ src/td6/main.cpp src/td6/ActiveCalc.cpp src/td6/Calculator.cpp src/td6/CrunchReq.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
