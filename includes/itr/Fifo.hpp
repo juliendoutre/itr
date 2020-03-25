@@ -29,7 +29,9 @@ class Fifo<T>::EmptyException : public std::exception
 };
 
 template <typename T>
-void Fifo<T>::push() {}
+void Fifo<T>::push()
+{
+}
 
 template <typename T>
 T Fifo<T>::pop()

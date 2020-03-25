@@ -9,6 +9,5 @@ void Worker::run()
     {
         Mutex::Lock lock = Mutex::Lock(this->mutex);
         *(this->counter) += 1;
-        // lock.notifyAll(); #TODO determine if this is necessary
     }
 }
