@@ -32,7 +32,7 @@ template <typename T>
 void Fifo<T>::push(T element)
 {
     Mutex::Lock lock = Mutex::Lock(this->mutex);
-    this->elements.push_back(element);
+    this->elements.push(element);
     lock.notify();
 }
 
@@ -45,7 +45,9 @@ T Fifo<T>::pop()
         lock.wait();
     }
 
-    return this->elements.pop_front();
+    T element = this->elements.front();
+    this->elements.pop();
+    return element;
 }
 
 template <typename T>
@@ -57,5 +59,7 @@ T Fifo<T>::pop(double timeout_ms)
         throw Fifo<T>::EmptyException();
     }
 
-    return this->elements.pop_front();
+    T element = this->elements.front();
+    this->elements.pop();
+    return element;
 }

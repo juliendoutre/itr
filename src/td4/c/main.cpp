@@ -1,7 +1,6 @@
 #include "itr/Semaphore.hpp"
 #include "Consumer.hpp"
 #include "Producer.hpp"
-#include <iostream>
 #include <vector>
 #include <assert.h>
 
@@ -47,5 +46,5 @@ int main()
     // no token should be available
     assert(!semaphore.take(100));
 
-    return EXIT_SUCCESS;
+    return 0;
 }
