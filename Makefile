@@ -41,5 +41,5 @@ td3: lib
 	g++ src/td3/c/main.cpp src/td3/c/Looper.cpp src/td3/c/Calibrator.cpp src/td3/c/CpuLoop.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td3_c -O3 -Wall -Wextra
 
 td4: lib
-	g++ src/td4/a/main.cpp src/td4/a/Looper.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
+	g++ src/td4/a/main.cpp src/td4/a/Worker.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
 	g++ src/td4/b/main.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_b -O3 -Wall -Wextra

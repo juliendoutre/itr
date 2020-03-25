@@ -1,15 +1,34 @@
-#include "Looper.hpp"
+#include "Worker.hpp"
 #include <iostream>
+#include <vector>
 
 int main()
 {
-    Looper looper = Looper(1000);
+    volatile int counter = 0;
 
-    looper.start();
-    looper.sleep_ms(1000);
+    unsigned int poolSize = 10;
 
-    std::cout << "Execution time (ms): " << looper.stopTime_ms() - looper.startTime_ms() << std::endl;
-    std::cout << "Execution time (ms): " << looper.execTime_ms() << std::endl;
+    // Initialize the workers pool
+    std::vector<Worker> workers;
+    for (unsigned int i = 0; i < poolSize; i++)
+    {
+        workers.push_back(Worker(1000, &counter));
+    }
+
+    // Start the workers
+    for (unsigned int i = 0; i < poolSize; i++)
+    {
+        workers[i].start();
+    }
+
+    // Wait for all workers to finish their job
+    for (unsigned int i = 0; i < poolSize; i++)
+    {
+        workers[i].join();
+        std::cout << "Task " << i << " took " << workers[i].execTime_ms() << " ms" << std::endl;
+    }
+
+    std::cout << "Counter value: " << counter << std::endl;
 
     return EXIT_SUCCESS;
 }
