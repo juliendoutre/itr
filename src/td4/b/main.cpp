@@ -18,13 +18,13 @@ int main()
     }
 
     // Start the workers
-    for (unsigned int i = 0; i < poolSize; i++)
+    for (auto &w : workers)
     {
-        workers[i].start();
+        w.start();
     }
 
     // Wait for all workers to finish their job
-    for (unsigned int i = 0; i < poolSize; i++)
+    for (unsigned int i = 0; i < workers.size(); i++)
     {
         workers[i].join();
         std::cout << "Task " << i << " took " << workers[i].execTime_ms() << " ms" << std::endl;

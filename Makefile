@@ -18,7 +18,7 @@ lib:
 	g++ -I ./includes/ -o build/Thread.o -O3 -Wall -Wextra -c  src/td4/a/Thread.cpp
 	g++ -I ./includes/ -o build/Mutex.o -O3 -Wall -Wextra -c src/td4/b/Mutex.cpp
 	g++ -I ./includes/ -o build/Semaphore.o -O3 -Wall -Wextra -c src/td4/c/Semaphore.cpp
-	ar rcs lib/itr.a build/time.o build/Chrono.o build/Timer.o build/PeriodicTimer.o build/PosixThread.o build/Thread.o build/Mutex.o
+	ar rcs lib/itr.a build/time.o build/Chrono.o build/Timer.o build/PeriodicTimer.o build/PosixThread.o build/Thread.o build/Mutex.o build/Semaphore.o
 
 td0:
 	gcc src/td0/a/main.c -o bin/td0_a -O3 -Wall -Wextra
@@ -43,3 +43,4 @@ td3: lib
 td4: lib
 	g++ src/td4/a/main.cpp src/td4/a/Worker.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
 	g++ src/td4/b/main.cpp src/td4/b/Worker.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_b -O3 -Wall -Wextra
+	g++ src/td4/c/main.cpp src/td4/c/Producer.cpp src/td4/c/Consumer.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_c -O3 -Wall -Wextra

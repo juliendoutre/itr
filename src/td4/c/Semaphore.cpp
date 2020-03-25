@@ -40,7 +40,10 @@ bool Semaphore::take(double timeout_ms)
 
 void Semaphore::give()
 {
-    Mutex::Lock lock = Mutex::Lock(this->mutex);
-    this->counter += 1;
-    lock.notify();
+    if (this->counter < this->maxCount - 1)
+    {
+        Mutex::Lock lock = Mutex::Lock(this->mutex);
+        this->counter += 1;
+        lock.notify();
+    }
 }
