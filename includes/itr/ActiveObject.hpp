@@ -1,0 +1,12 @@
+#include "Thread.hpp"
+#include "Fifo.hpp"
+#include "Request.hpp"
+
+class ActiveObject : public Thread
+{
+private:
+    Fifo<*Request> reqFifo;
+
+protected:
+    void run();
+};
