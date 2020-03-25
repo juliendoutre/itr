@@ -3,6 +3,7 @@
 #include "Producer.hpp"
 #include "Consumer.hpp"
 #include <vector>
+#include <assert.h>
 
 int main()
 {
@@ -42,6 +43,16 @@ int main()
     for (auto &c : consumers)
     {
         c.join();
+    }
+
+    try
+    {
+        fifo.pop(100);
+        assert(false);
+    }
+    catch (Fifo<int>::EmptyException e)
+    {
+        assert(true);
     }
 
     return 0;
