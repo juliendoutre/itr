@@ -9,7 +9,9 @@ private:
     volatile int *counter;
     Mutex &mutex;
 
+protected:
+    void run();
+
 public:
     Worker(unsigned int loops, volatile int *counter, Mutex &mutex);
-    void run();
 };

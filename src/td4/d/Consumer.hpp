@@ -11,7 +11,9 @@ private:
     Fifo<int> &fifo;
     Mutex &printMutex;
 
+protected:
+    void run();
+
 public:
     Consumer(unsigned int id, int queries, Fifo<int> &fifo, Mutex &printMutex);
-    void run();
 };

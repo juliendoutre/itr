@@ -7,7 +7,9 @@ class Consumer : public Thread
 private:
     Semaphore &semaphore;
 
+protected:
+    void run();
+
 public:
     Consumer(Semaphore &semaphore);
-    void run();
 };
