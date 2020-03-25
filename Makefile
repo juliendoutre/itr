@@ -44,3 +44,4 @@ td4: lib
 	g++ src/td4/a/main.cpp src/td4/a/Worker.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_a -O3 -Wall -Wextra
 	g++ src/td4/b/main.cpp src/td4/b/Worker.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_b -O3 -Wall -Wextra
 	g++ src/td4/c/main.cpp src/td4/c/Producer.cpp src/td4/c/Consumer.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_c -O3 -Wall -Wextra
+	g++ src/td4/d/main.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_d -O3 -Wall -Wextra

@@ -54,7 +54,7 @@ T Fifo<T>::pop(double timeout_ms)
     Mutex::Lock lock = Mutex::Lock(this->mutex, timeout_ms);
     if (!lock.wait(timeout_ms) || this->elements.size() == 0)
     {
-        throw Fifo<T>::EmptyException()
+        throw Fifo<T>::EmptyException();
     }
 
     return this->elements.pop_front();
