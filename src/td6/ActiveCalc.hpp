@@ -5,5 +5,5 @@
 class ActiveCalc : public ActiveObject
 {
 public:
-    *CrunchReq async_crunch(double param);
+    CrunchReq *async_crunch(double param);
 };

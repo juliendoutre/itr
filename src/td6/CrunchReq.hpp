@@ -9,6 +9,7 @@ private:
     Calculator &calc;
 
 public:
+    CrunchReq(double param, Calculator &calc);
     void execute();
     double waitReturn();
 };

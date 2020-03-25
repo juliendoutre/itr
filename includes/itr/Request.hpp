@@ -3,7 +3,7 @@
 
 class Request
 {
-private:
+protected:
     Semaphore returnSema;
 
 public:

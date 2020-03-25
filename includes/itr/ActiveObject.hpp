@@ -5,7 +5,7 @@
 
 class ActiveObject : public Thread
 {
-private:
+protected:
     Fifo<*Request> reqFifo;
 
 protected:
