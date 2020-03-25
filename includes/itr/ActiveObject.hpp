@@ -1,3 +1,4 @@
+#pragma once
 #include "Thread.hpp"
 #include "Fifo.hpp"
 #include "Request.hpp"

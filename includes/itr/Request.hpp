@@ -1,3 +1,4 @@
+#pragma once
 #include "Semaphore.hpp"
 
 class Request

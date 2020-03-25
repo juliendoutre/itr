@@ -1,3 +1,4 @@
+#pragma once
 #include "itr/ActiveObject"
 #include "CrunchReq.hpp"
 
