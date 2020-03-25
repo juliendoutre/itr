@@ -3,6 +3,7 @@
 #include "Producer.hpp"
 #include <iostream>
 #include <vector>
+#include <assert.h>
 
 int main()
 {
@@ -42,6 +43,9 @@ int main()
     {
         p.join();
     }
+
+    // no token should be available
+    assert(!semaphore.take(100));
 
     return EXIT_SUCCESS;
 }
