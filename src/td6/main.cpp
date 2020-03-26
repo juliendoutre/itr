@@ -18,15 +18,17 @@ int main()
         requests.push_back(activeCalc.async_crunch(i));
     }
 
-    for (auto const &r : requests)
+    for (auto const &req : requests)
     {
-        results.push_back(r->waitReturn());
+        results.push_back(req->waitReturn());
+        delete req;
+        requests.pop_back();
     }
 
     std::cout << results.size() << std::endl;
-    for (auto const &r : results)
+    for (auto const &res : results)
     {
-        std::cout << r << std::endl;
+        std::cout << res << std::endl;
     }
 
     return EXIT_SUCCESS;
