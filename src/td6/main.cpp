@@ -25,7 +25,7 @@ int main()
         requests.pop_back();
     }
 
-    std::cout << results.size() << std::endl;
+    std::cout << results.size() << " results were collected:" << std::endl;
     for (auto const &res : results)
     {
         std::cout << res << std::endl;
