@@ -2,6 +2,11 @@
 #include <time.h>
 #include <iostream>
 
+/**
+ * @brief This is a test
+ * @param time_ts is a timespec struct
+ * @return it returns the absolute time in milliseconds as a double
+*/
 double timespec_to_ms(const timespec &time_ts);
 timespec timespec_from_ms(double time_ms);
 
