@@ -1,9 +1,9 @@
 /**
  * @file
  * Example of communication on a bus with a hardware peripheral storing numbers in a fifo data structure.
- * - 0xfc000000 is the device writing port address.
- * - 0xfc000004 is the device reading port address.
- * - 0xfc000008 is the address of a port giving the number of elements stored in the queue.
+ * - `0xfc000000` is the device writing port address.
+ * - `0xfc000004` is the device reading port address.
+ * - `0xfc000008` is the address of a port giving the number of elements stored in the queue.
  * */
 
 #include <stdlib.h>
