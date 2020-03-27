@@ -28,3 +28,7 @@ make
 ```shell
 make doc
 ```
+
+## Exercices documentation
+
+- [TD0](main_8c.html)
