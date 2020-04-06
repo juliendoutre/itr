@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Execution time measurement of a multi-threaded computation for @ref td2_b.
+ * @anchor td2_b_main
+ * */
+
 #include <iostream>
 #include <pthread.h>
 #include "itr/time.hpp"

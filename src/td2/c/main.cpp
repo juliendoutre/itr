@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Demonstration of the use of a POSIX mutex for @ref td2_c.
+ * @anchor td2_c_main
+ * */
+
 #include <iostream>
 #include <pthread.h>
 #include <string.h>

@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Demonstration of the use of a POSIX thread for @ref td2_a.
+ * @anchor td2_a_main
+ * */
+
 #include <iostream>
 #include <pthread.h>
 #include "itr/time.hpp"
