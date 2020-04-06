@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Producer class for @ref td4_d.
+ * @anchor td4_d_producer
+ * */
+
 #include "itr/Fifo.hpp"
 #include "itr/Mutex.hpp"
 #include "Producer.hpp"

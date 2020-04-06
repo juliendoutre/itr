@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Test of the Semaphore class for @ref td4_c.
+ * @anchor td4_c_main
+ * */
+
 #include "itr/Semaphore.hpp"
 #include "Consumer.hpp"
 #include "Producer.hpp"

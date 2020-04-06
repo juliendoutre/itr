@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Mutex class for @ref td4_b.
+ * @anchor lib_mutex
+ * */
+
 #include "itr/Mutex.hpp"
 #include <pthread.h>
 #include "itr/time.hpp"

@@ -1,8 +1,8 @@
 /**
  * @file
- * @page td3 TD 3
+ * @page td3 3.
  *
- * @section td3_a a
+ * @section td3_a 3.a
  * @subsection Summary
  * TODO
  * @subsection Purpose
@@ -11,7 +11,7 @@
  * - @ref td3_a_main "src/td3/a/main.cpp"
  * - @ref lib_chrono "src/td3/a/Chrono.cpp"
  *
- * @section td3_b b
+ * @section td3_b 3.b
  * @subsection Summary
  * TODO
  * @subsection Purpose
@@ -22,7 +22,7 @@
  * - @ref lib_periodic_timer "src/td3/b/PeriodicTimer.cpp"
  *
  *
- * @section td3_c c
+ * @section td3_c 3.c
  * @subsection Summary
  * TODO
  * @subsection Purpose

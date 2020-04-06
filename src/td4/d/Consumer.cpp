@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Consumer class for @ref td4_d.
+ * @anchor td4_d_consumer
+ * */
+
 #include "itr/Fifo.hpp"
 #include "itr/Mutex.hpp"
 #include "Consumer.hpp"

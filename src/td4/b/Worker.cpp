@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Worker class for @ref td4_b.
+ * @anchor td4_b_worker
+ * */
+
 #include "Worker.hpp"
 #include "itr/Mutex.hpp"
 

@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the PosixThread class for @ref td4_a.
+ * @anchor lib_posix_thread
+ * */
+
 #include "itr/time.hpp"
 #include "itr/PosixThread.hpp"
 

@@ -1,8 +1,8 @@
 /**
  * @file
- * @page td2 TD 2
+ * @page td2 2.
  *
- * @section td2_a a
+ * @section td2_a 2.a
  * @subsection Summary
  * TODO
  * @subsection Purpose
@@ -10,7 +10,7 @@
  * @subsection files Related files
  * - @ref td2_a_main "src/td2/a/main.cpp"
  *
- * @section td2_b b
+ * @section td2_b 2.b
  * @subsection Summary
  * TODO
  * @subsection Purpose
@@ -19,7 +19,7 @@
  * @subsection files Related files
  * - @ref td2_b_main "src/td2/b/main.cpp"
  *
- * @section td2_c c
+ * @section td2_c 2.c
  * @subsection Summary
  * TODO
  * @subsection Purpose

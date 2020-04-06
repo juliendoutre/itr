@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Test of the Mutex class for @ref td4_b.
+ * @anchor td4_b_main
+ * */
+
 #include "itr/Mutex.hpp"
 #include "Worker.hpp"
 #include <iostream>

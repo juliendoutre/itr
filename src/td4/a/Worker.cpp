@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Worker class for @ref td4_a.
+ * @anchor td4_a_worker
+ * */
+
 #include "Worker.hpp"
 
 Worker::Worker(unsigned int loops, volatile int *counter) : loops(loops), counter(counter) {}

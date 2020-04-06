@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Test of the Fifo class for @ref td4_d.
+ * @anchor td4_d_main
+ * */
+
 #include "itr/Fifo.hpp"
 #include "itr/Mutex.hpp"
 #include "Producer.hpp"

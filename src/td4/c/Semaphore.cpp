@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Semaphore class for @ref td4_c.
+ * @anchor lib_semaphore
+ * */
+
 #include "itr/Semaphore.hpp"
 #include "itr/Mutex.hpp"
 

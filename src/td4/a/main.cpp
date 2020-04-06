@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Test of the Thread class for @ref td4_a.
+ * @anchor td4_a_main
+ * */
+
 #include "Worker.hpp"
 #include <iostream>
 #include <vector>
