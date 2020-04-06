@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the PeriodicTimer class for @ref td3_b.
+ * @anchor lib_periodic_timer
+ * */
+
 #include "itr/PeriodicTimer.hpp"
 #include "itr/time.hpp"
 

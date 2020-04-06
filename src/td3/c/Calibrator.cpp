@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Calibrator class for @ref td3_c.
+ * @anchor td3_c_calibrator
+ * */
+
 #include "Calibrator.hpp"
 #include "Looper.hpp"
 #include <vector>

@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Chrono class for @ref td3_a.
+ * @anchor lib_chrono
+ * */
+
 #include "itr/Chrono.hpp"
 #include "itr/time.hpp"
 

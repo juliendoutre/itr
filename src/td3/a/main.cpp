@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Test of the Chrono class for @ref td3_a.
+ * @anchor td3_a_main
+ * */
+
 #include "itr/Chrono.hpp"
 #include "itr/time.hpp"
 #include <assert.h>

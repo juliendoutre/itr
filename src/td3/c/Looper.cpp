@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Looper class for @ref td3_c.
+ * @anchor td3_c_looper
+ * */
+
 #include "Looper.hpp"
 #include <float.h>
 

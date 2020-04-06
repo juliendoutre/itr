@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Test of the CountDown class defined in @ref td3_b.
+ * @anchor td3_b_main
+ * */
+
 #include "CountDown.hpp"
 #include "itr/time.hpp"
 

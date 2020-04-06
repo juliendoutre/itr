@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the Timer class for @ref td3_b.
+ * @anchor lib_timer
+ * */
+
 #include "itr/Timer.hpp"
 #include "itr/time.hpp"
 

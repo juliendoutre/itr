@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the CountDown class for @ref td3_b.
+ * @anchor td3_b_countdown
+ * */
+
 #include "CountDown.hpp"
 #include <iostream>
 
