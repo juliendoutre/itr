@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Producer class for @ref td4_d.
+ * - **TD:** @ref td4_d
+ * - **Example class:** Producer
  * @anchor td4_d_producer
  * */
 

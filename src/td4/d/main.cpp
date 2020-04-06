@@ -1,6 +1,7 @@
 /**
  * @file
- * Test of the Fifo class for @ref td4_d.
+ * - **TD:** @ref td4_d
+ * - **Example:** lib's Fifo usage (through Consumer and Producer)
  * @anchor td4_d_main
  * */
 

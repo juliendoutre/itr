@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Calculator class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Example class:** Calculator
  * @anchor td6_calculator
  * */
 

@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Worker class for @ref td4_a.
+ * - **TD:** @ref td4_a
+ * - **Example class:** Worker
  * @anchor td4_a_worker
  * */
 

@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Consumer class for @ref td4_c.
+ * - **TD:** @ref td4_c
+ * - **Example class:** Consumer
  * @anchor td4_c_consumer
  * */
 

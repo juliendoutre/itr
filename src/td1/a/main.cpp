@@ -1,6 +1,7 @@
 /**
  * @file
- * Tests of the library time functions defined in @ref td1_a.
+ * - **TD:** @ref td1_a
+ * - **Example:** lib's time utils functions tests
  * @anchor td1_a_main
  * */
 

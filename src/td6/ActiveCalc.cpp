@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the ActiveCalc class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Example class:** ActiveCalc
  * @anchor td6_active_calc
  * */
 

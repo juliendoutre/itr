@@ -1,6 +1,7 @@
 /**
  * @file
- * Test of the Chrono class for @ref td3_a.
+ * - **TD:** @ref td3_a
+ * - **Example:** lib's Chrono tests
  * @anchor td3_a_main
  * */
 

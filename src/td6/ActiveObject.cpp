@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the ActiveObject class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Lib implementation:** ActiveObject
  * @anchor lib_active_object
  * */
 

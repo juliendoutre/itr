@@ -1,6 +1,7 @@
 /**
  * @file
- * Execution time measurement of a multi-threaded computation for @ref td2_b.
+ * - **TD:** @ref td2_b
+ * - **Example:** multi-theaded computation execution time measurement
  * @anchor td2_b_main
  * */
 

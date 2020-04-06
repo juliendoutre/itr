@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the CpuLoop class for @ref td3_c.
+ * - **TD:** @ref td3_c
+ * - **Example class:** CpuLoop
  * @anchor td3_c_cpu_loop
  * */
 

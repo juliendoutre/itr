@@ -1,6 +1,7 @@
 /**
  * @file
- * Example of use of the ActiveObject class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Example:** lib's ActiveObject usage (through ActiveCalc, Calculator, CrunchReq and TerminalReq)
  * @anchor td6_main
  * */
 

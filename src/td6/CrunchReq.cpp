@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the CrunchReq class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Example class:** CrunchReq
  * @anchor td6_crunch_req
  * */
 

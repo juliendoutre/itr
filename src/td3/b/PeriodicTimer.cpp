@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the PeriodicTimer class for @ref td3_b.
+ * - **TD:** @ref td3_b
+ * - **Lib implementation:** PeriodicTimer
  * @anchor lib_periodic_timer
  * */
 

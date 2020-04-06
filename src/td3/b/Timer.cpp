@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Timer class for @ref td3_b.
+ * - **TD:** @ref td3_b
+ * - **Lib implementation:** Timer
  * @anchor lib_timer
  * */
 

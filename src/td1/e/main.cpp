@@ -1,6 +1,7 @@
 /**
  * @file
- * A better function execution time calibration for @ref td1_e.
+ * - **TD:** @ref td1_e
+ * - **Example:** more accurate function execution time calibration
  * @anchor td1_e_main
  * */
 

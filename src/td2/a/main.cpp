@@ -1,6 +1,7 @@
 /**
  * @file
- * Demonstration of the use of a POSIX thread for @ref td2_a.
+ * - **TD:** @ref td2_a
+ * - **Example:** POSIX thread usage
  * @anchor td2_a_main
  * */
 

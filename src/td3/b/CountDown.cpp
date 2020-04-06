@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the CountDown class for @ref td3_b.
+ * - **TD:** @ref td3_b
+ * - **Example class:** CountDown
  * @anchor td3_b_countdown
  * */
 

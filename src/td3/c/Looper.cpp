@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Looper class for @ref td3_c.
+ * - **TD:** @ref td3_c
+ * - **Example class:** Looper
  * @anchor td3_c_looper
  * */
 

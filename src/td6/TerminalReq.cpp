@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the TerminalReq class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Example class:** TerminalReq
  * @anchor td6_terminal_req
  * */
 

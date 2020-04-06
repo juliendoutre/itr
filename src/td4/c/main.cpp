@@ -1,6 +1,7 @@
 /**
  * @file
- * Test of the Semaphore class for @ref td4_c.
+ * - **TD:** @ref td4_c
+ * - **Example:** lib's Semaphore usage (through Consumer and Producer)
  * @anchor td4_c_main
  * */
 

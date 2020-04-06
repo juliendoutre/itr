@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Chrono class for @ref td3_a.
+ * - **TD:** @ref td3_a
+ * - **Lib implementation:** Chrono
  * @anchor lib_chrono
  * */
 

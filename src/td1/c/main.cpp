@@ -1,6 +1,7 @@
 /**
  * @file
- * A function execution time measurement example for @ref td1_c.
+ * - **TD:** @ref td1_d
+ * - **Example:** function simple execution time measurement
  * @anchor td1_c_main
  * */
 

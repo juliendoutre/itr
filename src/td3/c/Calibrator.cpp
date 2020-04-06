@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Calibrator class for @ref td3_c.
+ * - **TD:** @ref td3_c
+ * - **Example class:** Calibrator
  * @anchor td3_c_calibrator
  * */
 

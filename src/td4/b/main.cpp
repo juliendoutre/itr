@@ -1,6 +1,7 @@
 /**
  * @file
- * Test of the Mutex class for @ref td4_b.
+ * - **TD:** @ref td4_b
+ * - **Example:** lib's Mutex usage (through Worker)
  * @anchor td4_b_main
  * */
 

@@ -1,6 +1,7 @@
 /**
  * @file
- * Demonstration of the use of a POSIX timer for @ref td1_b.
+ * - **TD:** @ref td1_b
+ * - **Example:** POSIX timer usage
  * @anchor td1_b_main
  * */
 

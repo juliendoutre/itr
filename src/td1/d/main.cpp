@@ -1,6 +1,7 @@
 /**
  * @file
- * A function execution time calibration for @ref td1_d.
+ * - **TD:** @ref td1_d
+ * - **Example:** function simple execution time calibration
  * @anchor td1_d_main
  * */
 

@@ -1,6 +1,7 @@
 /**
  * @file
- * Test of the CountDown class defined in @ref td3_b.
+ * - **TD:** @ref td3_b
+ * - **Example:** lib's PeriodicTimer usage (through CountDown).
  * @anchor td3_b_main
  * */
 

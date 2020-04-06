@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the PosixThread class for @ref td4_a.
+ * - **TD:** @ref td4_a
+ * - **Lib implementation:** PosixThread
  * @anchor lib_posix_thread
  * */
 

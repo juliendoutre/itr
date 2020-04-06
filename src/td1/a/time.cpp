@@ -1,6 +1,7 @@
 /**
  * @file
- * Library's time utils functions defined in @ref td1_a.
+ * - **TD:** @ref td1_a
+ * - **Lib implementation:** time utils functions
  * @anchor lib_time
  * */
 

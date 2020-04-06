@@ -1,6 +1,7 @@
 /**
  * @file
- * Test of the Thread class for @ref td4_a.
+ * - **TD:** @ref td4_a
+ * - **Example:** lib's Thread usage (through Worker)
  * @anchor td4_a_main
  * */
 

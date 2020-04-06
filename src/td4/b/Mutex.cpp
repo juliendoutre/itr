@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Mutex class for @ref td4_b.
+ * - **TD:** @ref td4_b
+ * - **Lib implementation:** Mutex
  * @anchor lib_mutex
  * */
 

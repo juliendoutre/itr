@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Semaphore class for @ref td4_c.
+ * - **TD:** @ref td4_c
+ * - **Lib implementation:** Semaphore
  * @anchor lib_semaphore
  * */
 

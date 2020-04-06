@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Request class for @ref td6.
+ * - **TD:** @ref td6
+ * - **Lib implementation:** Request
  * @anchor lib_request
  * */
 

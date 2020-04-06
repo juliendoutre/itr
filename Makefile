@@ -22,9 +22,6 @@ lib:
 	g++ -I ./includes/ -o build/Request.o -O3 -Wall -Wextra -c src/td6/Request.cpp
 	ar rcs lib/itr.a build/time.o build/Chrono.o build/Timer.o build/PeriodicTimer.o build/PosixThread.o build/Thread.o build/Mutex.o build/Semaphore.o build/ActiveObject.o build/Request.o
 
-td0:
-	gcc src/td0/main.c -o bin/td0 -O3 -Wall -Wextra
-
 td1: lib
 	g++ src/td1/a/main.cpp lib/itr.a -I ./includes/ -o bin/td1_a -O3 -Wall -Wextra
 	g++ src/td1/b/main.cpp -o bin/td1_b -lrt -O3 -Wall -Wextra

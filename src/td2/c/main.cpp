@@ -1,7 +1,8 @@
 /**
  * @file
- * Demonstration of the use of a POSIX mutex for @ref td2_c.
- * @anchor td2_c_main
+ * - **TD:** @ref td2_c
+ * - **Example:** POSIX mutex usage
+ * @anchor td2_ac_main
  * */
 
 #include <iostream>

@@ -1,6 +1,7 @@
 /**
  * @file
- * Implementation of the Thread class for @ref td4_a.
+ * - **TD:** @ref td4_a
+ * - **Lib implementation:** Thread
  * @anchor lib_thread
  * */
 
