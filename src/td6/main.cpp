@@ -31,5 +31,7 @@ int main()
         std::cout << res << std::endl;
     }
 
+    activeCalc.stop();
+
     return EXIT_SUCCESS;
 }

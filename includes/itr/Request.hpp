@@ -8,5 +8,6 @@ protected:
 
 public:
     virtual void execute() = 0;
+    virtual bool shouldTerminate() = 0;
     void waitReturn();
 };

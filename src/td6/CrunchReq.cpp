@@ -14,3 +14,8 @@ double CrunchReq::waitReturn()
     this->returnSema.take();
     return this->result;
 }
+
+bool CrunchReq::shouldTerminate()
+{
+    return false;
+}

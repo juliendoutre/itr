@@ -49,7 +49,7 @@ td4: lib
 	g++ src/td4/d/main.cpp src/td4/d/Producer.cpp src/td4/d/Consumer.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td4_d -O3 -Wall -Wextra
 
 td6: lib
-	g++ src/td6/main.cpp src/td6/ActiveCalc.cpp src/td6/Calculator.cpp src/td6/CrunchReq.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td6 -O3 -Wall -Wextra
+	g++ src/td6/main.cpp src/td6/ActiveCalc.cpp src/td6/Calculator.cpp src/td6/CrunchReq.cpp src/td6/TerminalReq.cpp lib/itr.a -I ./includes/ -lrt -pthread -o bin/td6 -O3 -Wall -Wextra
 
 doc:
 	doxygen Doxyfile
