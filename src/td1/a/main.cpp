@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Tests of the library time functions defined in @ref td1_a.
+ * @anchor td1_a_main
+ * */
+
 #include "itr/time.hpp"
 #include <assert.h>
 #include <iostream>

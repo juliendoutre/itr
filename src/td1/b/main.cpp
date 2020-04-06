@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Demonstration of the use of a POSIX timer for @ref td1_b.
+ * @anchor td1_b_main
+ * */
+
 #include <signal.h>
 #include <time.h>
 #include <iostream>

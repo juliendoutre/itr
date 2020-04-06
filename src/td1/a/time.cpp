@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Library's time utils functions defined in @ref td1_a.
+ * @anchor lib_time
+ * */
+
 #include "itr/time.hpp"
 #include <time.h>
 

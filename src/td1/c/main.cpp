@@ -1,3 +1,9 @@
+/**
+ * @file
+ * A function execution time measurement example for @ref td1_c.
+ * @anchor td1_c_main
+ * */
+
 #include <iostream>
 #include "itr/time.hpp"
 

@@ -1,3 +1,9 @@
+/**
+ * @file
+ * A function execution time calibration for @ref td1_d.
+ * @anchor td1_d_main
+ * */
+
 #include <iostream>
 #include <climits>
 #include <signal.h>
