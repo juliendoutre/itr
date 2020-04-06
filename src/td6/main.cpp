@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Example of use of the ActiveObject class for @ref td6.
+ * @anchor td6_main
+ * */
+
 #include "Calculator.hpp"
 #include "ActiveCalc.hpp"
 #include "CrunchReq.hpp"

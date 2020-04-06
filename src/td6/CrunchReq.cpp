@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the CrunchReq class for @ref td6.
+ * @anchor td6_crunch_req
+ * */
+
 #include "CrunchReq.hpp"
 #include "Calculator.hpp"
 

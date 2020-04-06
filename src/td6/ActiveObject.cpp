@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the ActiveObject class for @ref td6.
+ * @anchor lib_active_object
+ * */
+
 #include "itr/ActiveObject.hpp"
 #include "itr/Request.hpp"
 

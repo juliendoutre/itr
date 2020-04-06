@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Implementation of the ActiveCalc class for @ref td6.
+ * @anchor td6_active_calc
+ * */
+
 #include "ActiveCalc.hpp"
 #include "CrunchReq.hpp"
 #include "TerminalReq.hpp"
