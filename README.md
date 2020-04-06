@@ -28,3 +28,7 @@ make
 ```shell
 make doc
 ```
+
+to generate HTML and Latex Doxygen documentation for the project in the `doc/` folder.
+
+It will load the produced html page on your default browser (`doc/html/index.html`).

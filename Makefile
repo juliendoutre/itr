@@ -53,3 +53,4 @@ td6: lib
 
 doc:
 	doxygen Doxyfile
+	python -m webbrowser "file://${PWD}/doc/html/index.html"
