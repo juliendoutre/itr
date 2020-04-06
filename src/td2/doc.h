@@ -14,7 +14,8 @@
  * @subsection Summary
  * TODO
  * @subsection Purpose
- * TODO
+ * @image html graph.png "Temps d'exécution"
+ * @image latex graph.png "Temps d'exécution"
  * @subsection files Related files
  * - @ref td2_b_main "src/td2/b/main.cpp"
  *
