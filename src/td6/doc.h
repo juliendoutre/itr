@@ -13,4 +13,5 @@
  * -  @ref td6_crunch_req "src/td6/CrunchReq.cpp"
  * -  @ref lib_request "src/td6/Request.cpp"
  * -  @ref td6_terminal_req "src/td6/TerminalReq.cpp"
+ * -  @ref td6_client "src/td6/Client.cpp"
  * */

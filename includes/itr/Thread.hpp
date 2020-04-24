@@ -14,7 +14,7 @@ protected:
 
 public:
     Thread();
-    ~Thread();
+    virtual ~Thread();
     bool start();
     void sleep_ms(double delay_ms);
     double startTime_ms();

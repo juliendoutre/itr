@@ -1,13 +1,14 @@
 /**
  * @file
  * - **TD:** @ref td6
- * - **Example:** lib's ActiveObject usage (through ActiveCalc, Calculator, CrunchReq and TerminalReq)
+ * - **Example:** lib's ActiveObject usage (through ActiveCalc, Calculator, CrunchReq, TerminalReq and Client)
  * @anchor td6_main
  * */
 
 #include "Calculator.hpp"
 #include "ActiveCalc.hpp"
 #include "CrunchReq.hpp"
+#include "Client.hpp"
 #include <iostream>
 #include <vector>
 
@@ -19,23 +20,27 @@ int main()
     ActiveCalc activeCalc = ActiveCalc(calc);
     activeCalc.start();
 
-    std::vector<CrunchReq *> requests;
-    for (int i = 0; i < 100; i++)
+    std::vector<Client *> clients;
+    for (int i = 0; i < 10; i++)
     {
-        requests.push_back(activeCalc.async_crunch(i));
+        clients.push_back(new Client(i, 10 * i, 10 * (i + 1), activeCalc));
     }
 
-    for (auto const &req : requests)
+    for (auto const &client : clients)
     {
-        results.push_back(req->waitReturn());
-        delete req;
-        requests.pop_back();
+        client->start();
     }
 
-    std::cout << results.size() << " results were collected:" << std::endl;
-    for (auto const &res : results)
+    for (auto const &client : clients)
     {
-        std::cout << res << std::endl;
+        std::vector<int> results = client->getResults();
+        std::cout << results.size() << " results were collected for client " << client->id << ":" << std::endl;
+        for (auto const &res : results)
+        {
+            std::cout << res << std::endl;
+        }
+
+        delete client;
     }
 
     activeCalc.stop();
