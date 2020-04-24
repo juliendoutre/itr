@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td6_CrunchReq_hpp_INCLUDED
+#define td6_CrunchReq_hpp_INCLUDED
+
 #include "itr/Request.hpp"
 #include "Calculator.hpp"
 
@@ -14,3 +16,5 @@ public:
     double waitReturn();
     bool shouldTerminate();
 };
+
+#endif

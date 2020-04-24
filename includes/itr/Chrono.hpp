@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Chrono_hpp_INCLUDED
+#define Chrono_hpp_INCLUDED
+
 #include <time.h>
 
 class Chrono
@@ -16,3 +18,5 @@ public:
     double stopTime();
     double lap();
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Request_hpp_INCLUDED
+#define Request_hpp_INCLUDED
+
 #include "Semaphore.hpp"
 
 class Request
@@ -12,3 +14,5 @@ public:
     void waitReturn();
     virtual ~Request();
 };
+
+#endif

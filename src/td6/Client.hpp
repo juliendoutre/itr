@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td6_Client_hpp_INCLUDED
+#define td6_Client_hpp_INCLUDED
+
 #include "itr/Thread.hpp"
 #include "CrunchReq.hpp"
 #include "ActiveCalc.hpp"
@@ -23,3 +25,5 @@ public:
     ~Client();
     std::vector<int> getResults();
 };
+
+#endif

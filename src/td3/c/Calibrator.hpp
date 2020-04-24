@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td3_c_Calibrator_hpp_INCLUDED
+#define td3_c_Calibrator_hpp_INCLUDED
+
 #include "itr/PeriodicTimer.hpp"
 #include "Looper.hpp"
 #include <vector>
@@ -18,3 +20,5 @@ public:
     Calibrator(double samplingPeriod, unsigned int nSamples);
     double nLoops(double duration_ms);
 };
+
+#endif

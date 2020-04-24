@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td4_b_Worker_hpp_INCLUDED
+#define td4_b_Worker_hpp_INCLUDED
+
 #include "itr/Thread.hpp"
 #include "itr/Mutex.hpp"
 
@@ -15,3 +17,5 @@ protected:
 public:
     Worker(unsigned int loops, volatile int *counter, Mutex &mutex);
 };
+
+#endif

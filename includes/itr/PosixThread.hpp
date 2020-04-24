@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PosixThread_hpp_INCLUDED
+#define PosixThread_hpp_INCLUDED
+
 #include <pthread.h>
 #include <exception>
 
@@ -32,3 +34,5 @@ class PosixThread::Exception : public std::exception
         return "No existing thread matches this Posix id";
     }
 };
+
+#endif

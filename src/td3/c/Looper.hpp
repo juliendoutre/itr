@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td3_c_Looper_hpp_INCLUDED
+#define td3_c_Looper_hpp_INCLUDED
+
 #include "float.h"
 
 class Looper
@@ -12,3 +14,5 @@ public:
     double getSample();
     double stopLoop();
 };
+
+#endif

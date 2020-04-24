@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Timer_hpp_INCLUDED
+#define Timer_hpp_INCLUDED
+
 #include <time.h>
 #include <signal.h>
 
@@ -17,3 +19,5 @@ public:
     void start(double duration_ms);
     void stop();
 };
+
+#endif

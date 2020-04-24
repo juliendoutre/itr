@@ -1,4 +1,6 @@
-#pragma once
+#ifndef time_hpp_INCLUDED
+#define time_hpp_INCLUDED
+
 #include <time.h>
 #include <iostream>
 
@@ -29,3 +31,5 @@ bool operator<(const timespec &time1_ts, const timespec &time2_ts);
 bool operator>(const timespec &time1_ts, const timespec &time2_ts);
 
 std::ostream &operator<<(std::ostream &os, const timespec &time_ts);
+
+#endif

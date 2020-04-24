@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td3_b_CountDown_hpp_INCLUDED
+#define td3_b_CountDown_hpp_INCLUDED
+
 #include "itr/PeriodicTimer.hpp"
 
 class CountDown : public PeriodicTimer
@@ -10,3 +12,5 @@ public:
     CountDown(int n);
     void callback();
 };
+
+#endif

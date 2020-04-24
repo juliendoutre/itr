@@ -1,4 +1,6 @@
-#pragma once
+#ifndef td4_c_Consumer_hpp_INCLUDED
+#define td4_c_Consumer_hpp_INCLUDED
+
 #include "itr/Thread.hpp"
 #include "itr/Semaphore.hpp"
 
@@ -13,3 +15,5 @@ protected:
 public:
     Consumer(Semaphore &semaphore);
 };
+
+#endif

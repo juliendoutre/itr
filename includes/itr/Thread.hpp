@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Thread_hpp_INCLUDED
+#define Thread_hpp_INCLUDED
+
 #include "PosixThread.hpp"
 
 class Thread : public PosixThread
@@ -21,3 +23,5 @@ public:
     double stopTime_ms();
     double execTime_ms();
 };
+
+#endif

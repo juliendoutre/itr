@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Mutex_hpp_INCLUDED
+#define Mutex_hpp_INCLUDED
+
 #include <pthread.h>
 #include <exception>
 
@@ -62,3 +64,5 @@ public:
     TryLock(Mutex &mutex);
     ~TryLock();
 };
+
+#endif

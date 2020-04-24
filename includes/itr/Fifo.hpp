@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Fifo_hpp_INCLUDED
+#define Fifo_hpp_INCLUDED
+
 #include "Mutex.hpp"
 #include <queue>
 #include <exception>
@@ -63,3 +65,5 @@ T Fifo<T>::pop(double timeout_ms)
     this->elements.pop();
     return element;
 }
+
+#endif
