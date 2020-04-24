@@ -32,3 +32,10 @@ make doc
 to generate HTML and Latex Doxygen documentation for the project in the `doc/` folder.
 
 It will load the produced html page on your default browser (`doc/html/index.html`).
+
+## Documentation
+- [TD1](./td1.html)
+- [TD2](./td2.html)
+- [TD3](./td3.html)
+- [TD4](./td4.html)
+- [TD6](./td6.html)
