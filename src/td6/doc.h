@@ -1,11 +1,13 @@
 /**
  * @page td6 6.
  *
- * @section Summary
+ * @section td6_s Summary
  * TODO
- * @section Purpose
+ *
+ * @section td6_c Contents
  * TODO
- * @section files Related files
+ *
+ * @section td6_f Related files
  * -  @ref td6_main "src/td6/main.cpp"
  * -  @ref td6_active_calc "src/td6/ActiveCalc.cpp"
  * -  @ref lib_active_object "src/td6/ActiveObject.cpp"
