@@ -1,8 +1,8 @@
 /**
  * @file
- * - **TD:** @ref td2_c
+ * - **TD:** @ref td3_c
  * - **Example:** function execution time calibration using lib's Timer
- * @anchor td2_c_main
+ * @anchor td3_c_main
  * */
 
 #include "CpuLoop.hpp"
