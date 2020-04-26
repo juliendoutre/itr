@@ -5,7 +5,7 @@
  * @section td1_a 1.a
  *
  * @subsection td1_a_s Summary
- * Implements utils functions to ease the manipulations of the POSIX `timespec` struct.
+ * Implement utils functions to ease the manipulations of the POSIX `timespec` struct.
  *
  *  @subsection td1_a_c Contents
  * We first define functions to convert and convert back such a struct into a number (`double`) of milliseconds, easier to represent.
@@ -24,7 +24,7 @@
  * @section td1_b 1.b
  *
  * @subsection td1_b_s Summary
- * Demonstrates the POSIX timer usage.
+ * Demonstrate the POSIX timer usage.
  *
  * @subsection td1_b_c Contents
  * We initialize a `counter` integer to `0`. We declare it as `volatile` so the compiler won't try to deduce its value from the `main` code that follows (indeed, the variable is never modified in it, so it could chose to bypass the loops that come later on).
