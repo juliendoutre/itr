@@ -4,7 +4,8 @@ Source code for a real-time computer science course.
 
 ## Repository organization
 
-The exercices guide the development of functions and classes to manage the real-time execution of tasks on a Linux platform.
+These exercises guide the development of functions and classes to manage the real-time execution of tasks on a Linux platform.
+
 In this repository we gathered them in a static library called `itr`.
 It is used by several example programs that can be compiled and run to demonstrate the lib features.
 
