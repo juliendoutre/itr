@@ -2,6 +2,12 @@
 
 Source code for a real-time computer science course.
 
+## Requirements
+
+This project has only been tested on Linux.
+
+macOS is _officially not supported_ as [it does not implement the POSIX `timer_` APIs](https://unix.stackexchange.com/a/564129/250345).
+
 ## Repository organization
 
 These exercises guide the development of functions and classes to manage the real-time execution of tasks on a Linux platform.
