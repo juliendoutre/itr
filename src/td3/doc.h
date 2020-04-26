@@ -24,7 +24,7 @@
  * @subsection td3_b_s Summary
  * Implement a Timer class.
  *
- * @subsection td3_b_c contents
+ * @subsection td3_b_c Contents
  * We define a Timer class that embeds a POSIX timer.
  * Obviously, the Timer constructor and destructor are public.
  * It has two other public methods: `start` and `stop`. They are accessible to the user, since they are used to control the Timer.
