@@ -13,7 +13,7 @@ It is used by several example programs that can be compiled and run to demonstra
 - `doc/` contains the project documentation generated with Doxygen.
 - `lib/` contains the static library
 - `build/` contains the object files
-- `bin/` contains the examples binaries
+- `bin/` contains the example binaries
 
 The `Makefile` allows oneself to compile the static library, the examples and the documentation.
 
